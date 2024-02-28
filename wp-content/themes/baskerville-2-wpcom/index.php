@@ -22,7 +22,7 @@ get_header(); ?>
 					<div class="modulo">
 						<p> Descubre las historias inspiradoras de emprendedores santafesinos que están dejando su huella en la comunidad.
 							<br>Desde innovadores productos hasta servicios únicos, conoce cómo están transformando el panorama empresarial en Santa Fe.
-							<br>¡Apoyemos a los emprendedores locales y seamos parte del cambio! <br>. <br>.<br>. <br>Quieres ser parte de IDEAS?💡🤝🏽🌏🧠
+							<br>¡Apoyemos a los emprendedores locales y seamos parte del cambio! <br>. <br>Quieres ser parte de IDEAS?💡🤝🏽🌏🧠
 						</p>
 					</div>
 				</button>
@@ -33,7 +33,7 @@ get_header(); ?>
 						<p>En Santa Fe, la solidaridad es el sostén fundamental de las mutuales que velan por el bienestar de sus miembros.
 							Explora junto a 𝙄𝙙𝙚𝙖𝙨 - 𝙍𝙚𝙫𝙞𝙨𝙩𝙖 💡 cómo estas organizaciones brindan seguridad y apoyo mutuo a través de servicios financieros y sociales.
 							<br>¡Descubre cómo formar parte de una mutual puede fortalecer la red de ayuda en tu comunidad! 🤝🏽🔥💪🏽
-							<br>. <br>.<br>.
+							<br>.
 							<br>𝙄𝙙𝙚𝙖𝙨 - 𝙍𝙚𝙫𝙞𝙨𝙩𝙖 💡 acompañamos a Cooperativas, Mutuales y Emprendedores a comunicar sus servicios y productos.
 							<br>Te interesa ser parte? 🤗 💡🧠 🤝🏽 🌏
 						</p>
@@ -42,12 +42,14 @@ get_header(); ?>
 				<button class="bloque">
 					<h2 class="h2"><img src="http://localhost/wordpress/wp-content/uploads/2024/02/427945419_18010414226268780_7993750156445018134_n.jpg" alt="proceso"></h2>
 					<div class="modulo">
+
 						<p>Las cooperativas de Santa Fe están construyendo un tejido social sólido y sostenible.
 							Explora cómo estas comunidades trabajan juntas para impulsar el desarrollo local y mejorar la calidad de vida.
 							<br>¡Descubre cómo ser parte de una cooperativa puede marcar la diferencia en tu vida y en tu comunidad! 👐 💡 🧠 🤝🏽 🔥
-							<br>. <br>.<br>.
+							<br>.
 							<br>𝙄𝙙𝙚𝙖𝙨 - 𝙍𝙚𝙫𝙞𝙨𝙩𝙖 💡🧠🔥
 						</p>
+
 					</div>
 				</button>
 			</div>
@@ -56,17 +58,21 @@ get_header(); ?>
 		<script LANGUAGE="JavaScript">
 			var acc = document.getElementsByClassName("bloque");
 			var i;
+			screenWidth = window.screen.width,
+				screenHeight = window.screen.height;
 
-			for (i = 0; i < acc.length; i++) {
-				acc[i].addEventListener("click", function() {
-					this.classList.toggle("activo");
-					var panel = this.nextElementSibling;
-					if (panel.style.maxHeight) {
-						panel.style.maxHeight = null;
-					} else {
-						panel.style.maxHeight = panel.scrollHeight + "px";
-					}
-				});
+			if (screenWidth < 1024) {
+				for (i = 0; i < acc.length; i++) {
+					acc[i].addEventListener("click", function() {
+						this.classList.toggle("activo");
+						var panel = this.nextElementSibling;
+						if (panel.style.maxHeight) {
+							panel.style.maxHeight = null;
+						} else {
+							panel.style.maxHeight = panel.scrollHeight + "px";
+						}
+					});
+				}
 			}
 		</script>
 
