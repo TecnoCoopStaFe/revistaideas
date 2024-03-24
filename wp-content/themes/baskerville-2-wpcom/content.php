@@ -9,6 +9,27 @@
 <?php if ( ! is_single() ) { ?>
 	<div class="post-container">
 <?php } ?>
+<script LANGUAGE="JavaScript">
+			var acc = document.getElementsByClassName("post");
+			var i;
+			screenWidth = window.screen.width,
+				screenHeight = window.screen.height;
+
+			/* if (screenWidth < 1024) { */
+				for (i = 0; i < acc.length; i++) {
+					acc[i].addEventListener("click", function() {
+						this.classList.toggle("activo");
+						var panel = this.nextElementSibling;
+						if (panel.style.maxHeight) {
+							panel.style.maxHeight = null;
+						} else {
+							panel.style.maxHeight = panel.scrollHeight + "px";
+						}
+					});
+				}
+		/* 	} */
+		</script>
+
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

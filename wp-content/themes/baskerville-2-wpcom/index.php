@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="fix-post-header">
 			<h1 class="post-title title-shadow separador">IDEAS</h1>
 		</div>
-		<!--<h2 class="portfolio-subtitle text-center text-lg-center">Juegos 🕹️</h2>-->
+
 		<section class="reportes">
 
 			<div class="reportes container">
@@ -55,26 +55,12 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<script LANGUAGE="JavaScript">
-			var acc = document.getElementsByClassName("bloque");
-			var i;
-			screenWidth = window.screen.width,
-				screenHeight = window.screen.height;
 
-			if (screenWidth < 1024) {
-				for (i = 0; i < acc.length; i++) {
-					acc[i].addEventListener("click", function() {
-						this.classList.toggle("activo");
-						var panel = this.nextElementSibling;
-						if (panel.style.maxHeight) {
-							panel.style.maxHeight = null;
-						} else {
-							panel.style.maxHeight = panel.scrollHeight + "px";
-						}
-					});
-				}
-			}
-		</script>
+		<div class="index-banner">
+			<article class="index-ideas-banner-image">
+				<img src="http://localhost/wordpress/wp-content/uploads/2024/03/Mecha-Corta-Banner-home-02-1024x173-1.jpg">
+			</article>
+		</div>
 
 		<div class="fix-post-header">
 			<h1 class="post-title title-shadow separador">Novedades</h1>
@@ -99,6 +85,12 @@ get_header(); ?>
 					</div>
 				</div>
 
+				<style>
+				.post p {
+						display: none;
+					}
+				</style>
+
 				<?php while (have_posts()) : the_post();
 					get_template_part('content', get_post_format());
 				endwhile; ?>
@@ -108,6 +100,17 @@ get_header(); ?>
 			get_template_part('content', 'none');
 		?>
 		<?php endif; ?>
+
+		<div class="index-banner">
+			<article class="index-prefooter-1-banner-image">
+				<img src="http://localhost/wordpress/wp-content/uploads/2024/03/Mecha-Corta-Banner-home-02-1024x173-1.jpg">
+				<img src="http://localhost/wordpress/wp-content/uploads/2024/03/Mecha-Corta-Banner-home-02-1024x173-1.jpg">
+			</article>
+			<article class="index-prefooter-2-banner-image">
+				<img src="http://localhost/wordpress/wp-content/uploads/2024/03/Mecha-Corta-Banner-home-02-1024x173-1.jpg">
+			</article>
+		</div>
+
 
 	</main> <!-- /content -->
 </div> <!-- /wrapper -->
